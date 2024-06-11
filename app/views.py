@@ -14,7 +14,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/call/martha", methods = ["POST"])
-def call_martha():
+def call_martha():http://localhost:6700
     response = requests.post("https://www.google.com/recaptcha/api/siteverify", data ={
         "secret" : os.environ.get("RECAPTCHA_SITE_SECRET"),
         "response": request.form["g-recaptcha-response"]
